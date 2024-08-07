@@ -6,13 +6,12 @@ package pgstore
 
 import (
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5/pgtype"
 )
 
 type Message struct {
 	ID            uuid.UUID
 	RoomID        uuid.UUID
-	Messages      pgtype.Text
+	Message       string
 	ReactionCount int64
 	Answered      bool
 }
